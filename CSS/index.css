@@ -1,0 +1,43 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin-left: 100px;
+  /* display: flex; */
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* img{
+  display: block;
+  margin: 0 auto;
+} */
+section.player2 {
+  border-radius: 1px solid red;
+}
+.cards {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+h3 {
+  margin-left: 250px;
+  margin-top: 50px;
+}
+h1 {
+  margin-left: 170px;
+  font-size: 50px;
+}
+button,
+h2 {
+  margin-left: 50px;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
