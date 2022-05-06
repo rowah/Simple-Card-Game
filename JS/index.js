@@ -4,7 +4,7 @@ let deckId = ""
 fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data)
+        //console.log(data)
         deckId = data.deck_id
         
       })
@@ -21,17 +21,17 @@ function drawOne(){
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data)
+        //console.log(data)
         document.querySelector('#player1').src = data.cards[0].image
-        let player1Value = convertToNum(data.cards[0].value)
-        let player2Value = convertToNum(data.cards[1].value)
-        if(player1Value > player2Value) {
-          document.querySelector('h3').innerText = 'Player 1 Wins'
-        } else if(player2Value > player1Value) {
-          document.querySelector('h3').innerText = 'Player 2 Wins'
-        } else {
-          document.querySelector('h3').innerText = 'War Time!'
-        }
+        // let player1Value = convertToNum(data.cards[0].value)
+        // let player2Value = convertToNum(data.cards[1].value)
+        // if(player1Value > player2Value) {
+        //   document.querySelector('h3').innerText = 'Player 1 Wins'
+        // } else if(player2Value > player1Value) {
+        //   document.querySelector('h3').innerText = 'Player 2 Wins'
+        // } else {
+        //   document.querySelector('h3').innerText = 'War Time!'
+        // }
         
       })
       .catch(err => {
@@ -46,8 +46,10 @@ function drawTwo(){
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data)
+        //console.log(data)
         document.querySelector('#player2').src = data.cards[0].image
+
+        //winning conditions
         let player1Value = convertToNum(data.cards[0].value)
         let player2Value = convertToNum(data.cards[1].value)
         if(player1Value > player2Value) {
